@@ -13,6 +13,7 @@ async function bootstrap() {
     cors: {
       origin: '*',
     },
+    allowEIO3: true,
   });
   await app.listen(3000);
 }
