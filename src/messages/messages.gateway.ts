@@ -17,7 +17,7 @@ export class MessagesGateway {
   }
 
   @SubscribeMessage('findAllMessages')
-  findAll(@Query('chatId') chatId: string) {
+  findAll(@MessageBody() chatId: string) {
     return this.messagesService.findAll(+chatId);
   }
 }
