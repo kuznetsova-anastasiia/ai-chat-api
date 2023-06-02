@@ -9,5 +9,5 @@ export class Message extends Model {
   role: 'assistant' | 'system' | 'user';
 
   @Column
-  chatId: string;
+  chatId: number;
 }

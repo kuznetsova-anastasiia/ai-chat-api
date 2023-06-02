@@ -12,8 +12,9 @@ async function bootstrap() {
   const socketio = new Server(server, {
     cors: {
       origin: '*',
+      methods: ['GET', 'POST'],
     },
-    allowEIO3: true,
+    allowEIO3: false,
   });
   await app.listen(3000);
 }
