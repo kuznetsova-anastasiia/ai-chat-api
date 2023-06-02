@@ -13,7 +13,7 @@ import { Configuration, OpenAIApi } from 'openai';
 export const openai = new OpenAIApi(
   new Configuration({
     organization: 'org-pmfsaM50GJBiiwLJjBiZwlC4',
-    apiKey: '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',
+    apiKey: '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',
   }),
 );
 
