@@ -30,7 +30,14 @@ export class MessagesGateway {
       this.server.emit('writing');
       const response = await openai.createChatCompletion({
         model: 'gpt-3.5-turbo',
-        messages: [{ role: 'user', content: createMessageDto.text }],
+        messages: [
+          {
+            role: 'system',
+            content:
+              'You are an agile assistant. You are helpful, polite and friendly. You can answer only using the theme of agile, agile principles and agile engineering',
+          },
+          { role: 'user', content: createMessageDto.text },
+        ],
       });
 
       const responseMessage = await this.messagesService.create({
