@@ -1,73 +1,83 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# AI Chat API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+AI Chat API is a RESTful API that provides a convenient way to interact with the AI Chatbot powered by OpenAI's GPT-3.5 model. This repository contains the code and resources necessary to set up and deploy the AI Chat API.
 
 ## Installation
 
-```bash
-$ npm install
+To install and set up the AI Chat API, follow these steps:
+
+1. Clone the repository to your local machine using the following command:
+
+```
+git clone https://github.com/kuznetsova-anastasiia/ai-chat-api.git
 ```
 
-## Running the app
+2. Navigate to the project directory:
 
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+```
+cd ai-chat-api
 ```
 
-## Test
+3. Install the required dependencies. Run the following command to install the dependencies:
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+```
+npm install
 ```
 
-## Support
+4. Set up OpenAI API access:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+   - Sign up for an account at the [OpenAI website](https://openai.com/) if you haven't already.
+   - Generate an API key from the OpenAI dashboard.
+   - Create a file named `.env` in the root directory of the project.
+   - Add the following line to the `.env` file, replacing `YOUR_API_KEY` with your actual API key:
 
-## Stay in touch
+   ```text
+   API_KEY=YOUR_API_KEY
+   ```
+   
+5. Add a link to you Database to `.env` file:
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```
+DB_URL=YOUR_DB_URL
+```
 
-## License
+## Usage
 
-Nest is [MIT licensed](LICENSE).
+To start the AI Chat API server, run the following command:
+
+```
+npm start
+```
+or
+```
+npm run start:dev
+```
+
+The API server will be running locally on `http://localhost:3000` by default.
+
+## Technologies Used
+
+The Vet App is built using the following technologies:
+
+- **Nest**
+- **Sequelize**
+- **TypeScript**
+- **Socket.io**
+- **OpenAi API**
+
+## Contributing
+
+Contributions to the AI Chat API project are welcome! If you have any bug fixes, improvements, or new features to add, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make the necessary modifications.
+4. Test your changes to ensure they work as expected.
+5. Commit your changes and push them to your forked repository.
+6. Submit a pull request describing your changes.
+
+Please ensure that your code follows the existing code style and conventions. Also, make sure to update or create tests where applicable to maintain the code quality.
+
+## Contact
+
+Anastasiia Kuznetsova - [mail](mailto:anastasiia.kzntsva@gmail.com)
