@@ -24,7 +24,6 @@ export class MessagesGateway {
   async create(@MessageBody() createMessageDto: CreateMessageDto) {
     const message = await this.messagesService.create(createMessageDto);
     this.server.emit('newMessage', message);
-    console.log(process.env.API_KEY);
 
     try {
       this.server.emit('writing');
@@ -34,7 +33,7 @@ export class MessagesGateway {
           {
             role: 'system',
             content:
-              'You are an agile assistant. You are helpful, polite and friendly. You can answer only using the theme of agile, agile principles and agile engineering',
+              'You are an agile coach. You are helpful, polite and friendly. You can answer only using the theme of agile, agile principles and agile engineering',
           },
           { role: 'user', content: createMessageDto.text },
         ],
