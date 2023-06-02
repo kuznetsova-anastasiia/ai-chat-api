@@ -7,15 +7,7 @@ import {
 import { MessagesService } from './messages.service';
 import { CreateMessageDto } from './dto/create-message.dto';
 import { Server } from 'socket.io';
-
-import { Configuration, OpenAIApi } from 'openai';
-
-export const openai = new OpenAIApi(
-  new Configuration({
-    organization: 'org-pmfsaM50GJBiiwLJjBiZwlC4',
-    apiKey: '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',
-  }),
-);
+import { openai } from 'src/openai/openai';
 
 @WebSocketGateway({
   cors: {
@@ -32,6 +24,7 @@ export class MessagesGateway {
   async create(@MessageBody() createMessageDto: CreateMessageDto) {
     const message = await this.messagesService.create(createMessageDto);
     this.server.emit('newMessage', message);
+    console.log(process.env.API_KEY);
 
     try {
       this.server.emit('writing');
